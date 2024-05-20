@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon.png">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <title>SallyCosmetics</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="nav-left">
+                <h6><ion-icon name="call-outline"></ion-icon>254 790 118 500</h6>
+                <h6><ion-icon name="mail-outline"></ion-icon>gitongasally4@gmail.com</h6>
+            </div>
+            <div class="nav-center">
+                <h6>Follow us and get a chance to win 80% off</h6>
+            </div>
+            <div class="nav-right">
+                <h6>Follow us : </h6>
+                <ion-icon name="logo-instagram"></ion-icon>
+                <ion-icon name="logo-youtube"></ion-icon>
+                <ion-icon name="logo-facebook"></ion-icon>
+                <ion-icon name="logo-twitter"></ion-icon>
+            </div>
+        </div>
+
+        <div class="nav1">
+            <div class="nav1-left">
+                <h1>SallyCosmetics</h1>
+                <h6>Home</h6>
+                <h6>Shop</h6>
+                <h6>About</h6>
+                <h6>Blog</h6>
+                <h6>Contact</h6>
+                <h6>Pages</h6>
+            </div>
+            <div class="nav1-right">
+                <h6><ion-icon name="person-outline"></ion-icon>Login/Register</h6>
+                <ion-icon name="search-outline"></ion-icon>
+                <ion-icon id="cartButton" name="cart-outline"></ion-icon>
+                <ion-icon id="addProduct" name="add-outline"></ion-icon>
+            </div>
+        </div>
+
+        <div id="cart" class="cart">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button id="closeCartButton">&times;</button>
+            </div>
+            <div class="cart-content" id="cart-content">
+                <!-- Cart items will go here -->
+                <!-- <div class="cart-product">
+                    <div class="cart-product-image">
+                        <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bGlwc3RpY2t8ZW58MHx8MHx8fDA%3D"
+                            alt="">
+                    </div>
+                    <div class="cart-product-details">
+                        <div>
+                            <h4>Liptick</h4>
+                        </div>
+                        <div>
+                            <p>Price: Ksh 1,200</p>
+                            <p><ion-icon name="add-circle-outline"></ion-icon>2<ion-icon
+                                    name="remove-circle-outline"></ion-icon></p>
+                            <button>Remove </button>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+            <div class="grand-total">
+                <h4 class="totalPrice">Total Price:</h4>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <div class="products-container">
+                <!-- <div class="product">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bGlwc3RpY2t8ZW58MHx8MHx8fDA%3D"
+                            alt="">
+                    </div>
+                    <div class="product-details">
+                        <div>
+                            <h4>Liptick</h4>
+                        </div>
+                        <div>
+                            <p>Price: Ksh 1,200</p>
+                            <p>Quantity: 50 pieces</p>
+                            <button>Add to cart</button>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+
+            <div class="add">
+                <form id="addProductForm" class="addProductForm">
+                    <div class="form-title">
+                        <h2>Add Product</h2>
+                        <button id="closeAddProductForm">&times;</button>
+                    </div>
+                    <label>Title</label>
+                    <input type="text" id="product-title">
+                    <label>Price</label>
+                    <input type="text" id="product-price">
+                    <label>Quantity</label>
+                    <input type="text" id="product-quantity">
+                    <label>Image-URL</label>
+                    <input type="text" id="image-url">
+                    <div class="button-div">
+                        <button class="addProduct" type="submit" id="addProductSubmit">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="links">
+            <div class="company-info">
+                <h4>Company Info</h4>
+                <a href="#">About Us</a>
+                <a href="#">Carrier</a>
+                <a href="#">We are hiring</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="legal">
+                <h4>Legal</h4>
+                <a href="#">About Us</a>
+                <a href="#">Carrier</a>
+                <a href="#">We are hiring</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="features">
+                <h4>Features</h4>
+                <a href="#">Business Marketing</a>
+                <a href="#">User Analytics</a>
+                <a href="#">Live Chat</a>
+                <a href="#">Unlimited Support</a>
+            </div>
+            <div class="resources">
+                <h4>Resources</h4>
+                <a href="#">IOS and Android</a>
+                <a href="#">Watch a Demo</a>
+                <a href="#">Customers</a>
+                <a href="#">API</a>
+            </div>
+            <div class="get-in-touch">
+                <h4>Get In Touch</h4>
+                <p><ion-icon name="call-outline"></ion-icon>(480) 555-0103</p>
+                <p><ion-icon name="location-outline"></ion-icon>4517 Washington Ave.</p>
+                <p><ion-icon name="mail"></ion-icon>debra.holt@example.com</p>
+            </div>
+        </div>
+        <div class="last-thing">
+            <div class="copyright">
+                <p>Made With Love By Sally Gitonga All Rights Reserved</p>
+            </div>
+            <div class="socials">
+                <p>Follow us : </p>
+                <ion-icon name="logo-youtube"></ion-icon>
+                <ion-icon name="logo-facebook"></ion-icon>
+                <ion-icon name="logo-instagram"></ion-icon>
+                <ion-icon class="twitter" name="logo-twitter"></ion-icon>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

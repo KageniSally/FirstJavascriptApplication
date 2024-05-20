@@ -1,0 +1,448 @@
+:root {
+    --secondary-color: #4D869C;
+    --primary-color: #EEF7FF;
+    --dark-blue: #7AB2B2;
+    --light-blue: #CDE8E5;
+    --white: #FFFFFF;
+    --black: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    height: 50px;
+}
+
+.nav-left {
+    display: flex;
+    gap: 15px;
+    margin-left: 20px;
+}
+
+.nav-left ion-icon {}
+
+.nav-right {
+    margin-right: 20px;
+    display: flex;
+    gap: 5px;
+}
+
+.nav h6 {
+    color: var(--primary-color);
+}
+
+ion-icon {
+    color: var(--primary-color);
+    height: 15px;
+    width: 15px;
+}
+
+.nav1 {
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    height: 70px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav1-left {
+    gap: 10px;
+    display: flex;
+    height: 70px;
+    align-items: center;
+}
+
+.nav1-right {
+    display: flex;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+.nav1 ion-icon {
+    color: var(--dark-blue);
+}
+
+.nav1-left h6 {
+    color: black;
+    font-weight: 500;
+}
+
+.nav1-right h6 {
+    color: var(--dark-blue);
+    font-weight: 500;
+}
+
+h1 {
+    color: black;
+    margin-left: 20px;
+    margin-right: 40px;
+}
+
+.cart {
+    position: fixed;
+    top: 135px;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: var(--primary-color);
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.cart.open {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--dark-blue);
+    color: #fff;
+}
+
+.cart-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#closeCartButton {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.content-container {
+    width: 100%;
+    transition: width 0.3s ease;
+    padding: 0px;
+}
+
+.content-container.shrink {
+    width: 75%;
+    transition: width 0.3s ease;
+}
+
+.cart-product {
+    display: flex;
+    padding: 15px;
+    height: 150px;
+    background-color: var(--white);
+}
+
+.cart-product-image {
+    height: 150px;
+    width: 120px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-product-image img {
+    height: 150px;
+    width: 100%;
+}
+
+.cart-product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding-left: 15px;
+}
+
+.quantity-div ion-icon {
+    color: var(--black);
+    height: 20px;
+    width: 20px;
+
+}
+
+.quantity-div {
+    display: flex;
+    gap: 10px;
+}
+
+.quantity {
+    width: 30px;
+}
+
+.cart-product h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.cart-product p {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--black);
+}
+
+.cart-product button {
+    background-color: var(--secondary-color);
+    color: var(--light-blue);
+    height: 30px;
+    width: 95%;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.grand-total {
+    padding: 10px;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+
+
+.products-container.two-columns {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.product {
+    display: flex;
+    padding: 15px;
+    height: 150px;
+    background-color: var(--primary-color);
+}
+
+.product-image {
+    height: 150px;
+    width: 120px;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image img {
+    height: 150px;
+    width: 100%;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding-left: 15px;
+}
+
+.product h4 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.product p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.product button {
+    background-color: var(--secondary-color);
+    color: var(--light-blue);
+    height: 30px;
+    width: 95%;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.add {
+    display: none;
+    position: fixed;
+    top: 135px;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: var(--primary-color);
+    z-index: 1000;
+    padding: 20px;
+}
+
+.add.open {
+    display: flex;
+}
+
+.addProductForm {
+    background-color: var(--primary-color);
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.content-container-expanded {
+    width: 100%;
+}
+
+.form-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-title button {
+    background: none;
+    border: none;
+    color: var(--black);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+form h2 {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+form label {
+    font-size: 12px;
+    font-weight: 700;
+    padding-top: 10px;
+}
+
+form input {
+    height: 35px;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.button-div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.addProduct {
+    width: 50%;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    height: 25px;
+}
+
+footer {
+    height: 200px;
+    width: 100%;
+}
+
+.links {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    background-color: white;
+    height: 180px;
+    width: 100%;
+}
+
+.company-info,
+.legal,
+.features,
+.resources,
+.get-in-touch {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.company-info h4,
+.legal h4,
+.features h4,
+.resources h4,
+.get-in-touch h4 {
+    font-size: 12px;
+}
+
+.get-in-touch ion-icon {
+    color: var(--dark-blue);
+    height: 15px;
+    width: 15px;
+    padding-right: 5px;
+}
+
+.get-in-touch p {
+    font-size: 12px;
+}
+
+.company-info a,
+.legal a,
+.features a,
+.resources a,
+.get-in-touch a {
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+}
+
+.last-thing {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    height: 50px;
+    align-items: center;
+    background-color: var(--secondary-color);
+}
+
+.copyright p {
+    font-size: 12px;
+    margin-left: 200px;
+    color: var(--white);
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 10px;
+}
+
+.socials p {
+    font-size: 12px;
+    margin-left: 100px;
+    color: var(--white);
+}
+
+.socials ion-icon {
+    color: var(--white);
+    height: 15px;
+}
